@@ -89,9 +89,11 @@ def launch_assistant(topic):
         add_new_message("assistant", response)
     
 hide_toolbar_css = """
+<style>
 [data-testid='stToolbar'] {
     display:none;
 }
+</style>
 """
 st.markdown(hide_toolbar_css, unsafe_allow_html=True)
 
