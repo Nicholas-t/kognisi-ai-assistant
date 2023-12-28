@@ -88,6 +88,13 @@ def launch_assistant(topic):
         response = add_user_response_and_wait_openai(client, st.session_state["thread_id"], prompt, file_ids=[file_id])
         add_new_message("assistant", response)
     
+hide_toolbar_css = """
+[data-testid='stToolbar'] {
+    display:none;
+}
+"""
+st.markdown(hide_toolbar_css, unsafe_allow_html=True)
+
 topic_input = ""
 with st.sidebar:
     topic_input = st.selectbox("Topic to test", key="topic", options=[a["label"] for a in TOPIC])
