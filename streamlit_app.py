@@ -72,7 +72,7 @@ def launch_assistant(topic):
     for f in TOPIC:
         if f["label"] == topic:
             file_id = f["file_id"]
-    client = OpenAI(api_key="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")
+    client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
     st.title("💬 AI Teach Assistant (Kognisi)") 
     
     if "messages" not in st.session_state:
