@@ -93,6 +93,10 @@ hide_toolbar_css = """
 [data-testid='stToolbar'] {
     display:none;
 }
+
+footer {
+    visibility: hidden;
+}
 </style>
 """
 st.markdown(hide_toolbar_css, unsafe_allow_html=True)
